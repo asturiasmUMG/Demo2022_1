@@ -8,19 +8,19 @@ namespace WFArbolBinario
 {
     class Estudiante : Comparador
     {
-        int Carne { get; set; }
+        int Carnet { get; set; }
         String Nombre { get; set; }
 
-        public Estudiante(int carne, String nombre)
+        public Estudiante(int carnet, String nombre)
         {
-            Carne = carne;
+            Carnet = carne;
             Nombre = nombre;
         }
 
         bool Comparador.igualQue(Object op2)
         {
             Estudiante p2 = (Estudiante)op2;
-            return Carne == p2.Carne;
+            return Carne == p2.Carnet;
         }
 
         bool Comparador.menorQue(Object op2)
@@ -30,30 +30,30 @@ namespace WFArbolBinario
             //    return true;
             //else
             //    return false;
-            return Carne < p2.Carne;
+            return Carnet < p2.Carnet;
         }
 
         bool Comparador.menorIgualQue(Object op2)
         {
             Estudiante p2 = (Estudiante)op2;
-            return Carne <= p2.Carne;
+            return Carnet <= p2.Carnet;
         }
 
         bool Comparador.mayorQue(Object op2)
         {
             Estudiante p2 = (Estudiante)op2;
-            return Carne > p2.Carne;
+            return Carnet > p2.Carnet;
         }
 
         bool Comparador.mayorIgualQue(Object op2)
         {
             Estudiante p2 = (Estudiante)op2;
-            return Carne > p2.Carne;
+            return Carnet > p2.Carnet;
         }
 
         public override string ToString()
         {
-            return "(" + Carne + ")";
+            return "(" + Carnet + ")";
         }
     }
 
